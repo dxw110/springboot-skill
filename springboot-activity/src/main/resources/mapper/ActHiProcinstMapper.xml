@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dcool.springbootactivity.activity.mapper.ActHiProcinstMapper">
+
+
+    <select id="getBusinessKey" resultType="com.dcool.springbootactivity.activity.entity.ActHiProcinst">
+        select PROC_INST_ID_,BUSINESS_KEY_ from ACT_HI_PROCINST where PROC_INST_ID_ = #{procInstId}
+    </select>
+</mapper>

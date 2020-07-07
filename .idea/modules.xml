@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot-activity/springboot-activity.iml" filepath="$PROJECT_DIR$/springboot-activity/springboot-activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-security/springboot-security.iml" filepath="$PROJECT_DIR$/springboot-security/springboot-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springboot-skill.iml" filepath="$PROJECT_DIR$/.idea/springboot-skill.iml" />
+    </modules>
+  </component>
+</project>

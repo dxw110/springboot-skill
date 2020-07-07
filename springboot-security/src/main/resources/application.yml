@@ -1,0 +1,44 @@
+
+server:
+  port: 8089
+  servlet:
+    session:
+      timeout: 1440m
+      cookie:
+        name: JSESSIONID_YZ110
+
+spring:
+  servlet:
+    multipart:
+      max-request-size: 10MB
+  datasource:
+    username: root
+    password: rPCFhd0ro28j7e5u
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.132.133.37:3306/security?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 600000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+  security:
+    user:
+      name: yz
+      password: yzoa
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    banner: false
+    db-config:
+      id-type: id_worker_str
+  configuration:
+    call-setters-on-nulls: true

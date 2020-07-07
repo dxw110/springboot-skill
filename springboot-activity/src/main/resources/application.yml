@@ -1,0 +1,41 @@
+
+server:
+  port: 8890
+spring:
+  servlet:
+    multipart:
+      max-request-size: 10MB
+  datasource:
+    username: root
+    password: rPCFhd0ro28j7e5u
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.132.133.37:3306/activity?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 600000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+
+  main:
+    allow-bean-definition-overriding: true
+  activiti:
+    database-schema-update: true
+    job-executor-activate: true # asyncExecutorEnabled属性设置设置true后将代替那些老的Job executor
+    history-level: full
+    db-history-used: true
+    check-process-definitions: false # 自动部署验证设置:true-开启（默认）、false-关闭
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    banner: false
+    db-config:
+      id-type: id_worker_str
+  configuration:
+    call-setters-on-nulls: true
